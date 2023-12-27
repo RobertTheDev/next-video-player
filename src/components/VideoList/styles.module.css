@@ -4,14 +4,20 @@
     position: relative;
 }
 
-.videoThumbnailImage {
-    height: 100%;
+.videoListContainer {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 32px;
     width: 100%;
+
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.videoList {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.videoThumbnailContainer {
+    aspect-ratio: 16/9;
     width: 100%;
+    position: relative;
 }
