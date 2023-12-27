@@ -26,6 +26,8 @@
 
 .videoThumbnailContainer {
     aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
     width: 100%;
     position: relative;
 }
