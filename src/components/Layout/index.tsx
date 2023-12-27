@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <header className={styles.headerContainer}>
         <div className={styles.headerLeftContainer}>
           <Link href={"/"} className={styles.logoImageContainer}>
@@ -80,7 +80,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           </button>
         </div>
       </header>
-      <main>{children}</main>
+      <div className={styles.pageContentContainer}>
+        <main>{children}</main>
+      </div>
     </div>
   );
 }
