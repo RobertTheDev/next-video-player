@@ -3,9 +3,13 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { FaSearch, FaPlus, FaHeart, FaSun, FaMoon } from "react-icons/fa";
 import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { theme, setTheme } = useTheme();
+
+  const router = useRouter();
 
   const [mounted, setMounted] = useState(false);
 
@@ -21,17 +25,21 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div>
       <header className={styles.headerContainer}>
         <div className={styles.headerLeftContainer}>
-          <div className={styles.logoImageContainer}>
+          <Link href={"/"} className={styles.logoImageContainer}>
             <Image
               fill
               alt="logo"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1024px-YouTube_Logo_2017.svg.png"
             />
-          </div>
+          </Link>
         </div>
         <div className={styles.headerCenterContainer}>
           <input placeholder="Search" />
-          <button>
+          <button
+            onClick={() => {
+              router.push("/results");
+            }}
+          >
             <FaSearch />
           </button>
         </div>
@@ -47,16 +55,29 @@ export default function Layout({ children }: { children: ReactNode }) {
           >
             {theme === "dark" ? <FaMoon /> : <FaSun />}
           </button>
-          <button>
+          <button
+            onClick={() => {
+              router.push("/upload-video");
+            }}
+          >
             <FaPlus />
           </button>
-          <button>
+          <button
+            onClick={() => {
+              router.push("/saved");
+            }}
+          >
             <FaHeart />
           </button>
 
-          <div className={styles.avatarImageContainer}>
+          <button
+            className={styles.avatarImageContainer}
+            onClick={() => {
+              router.push("/channel/1");
+            }}
+          >
             <Image fill alt="logo" src="/avatar.png" objectFit="cover" />
-          </div>
+          </button>
         </div>
       </header>
       <main>{children}</main>
