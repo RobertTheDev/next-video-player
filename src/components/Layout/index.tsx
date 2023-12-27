@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { FaSearch, FaPlus, FaHeart } from "react-icons/fa";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -17,12 +18,18 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
         <div className={styles.headerCenterContainer}>
           <input placeholder="Search" />
-          <button>Search</button>
+          <button>
+            <FaSearch />
+          </button>
         </div>
         <div className={styles.headerRightContainer}>
-          <button>+</button>
-          <button>L</button>
-          <button>P</button>
+          <button>
+            <FaPlus />
+          </button>
+          <button>
+            <FaHeart />
+          </button>
+
           <div className={styles.avatarImageContainer}>
             <Image fill alt="logo" src="/avatar.png" objectFit="cover" />
           </div>
