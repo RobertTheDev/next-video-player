@@ -23,6 +23,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           <button>+</button>
           <button>L</button>
           <button>P</button>
+          <div className={styles.avatarImageContainer}>
+            <Image fill alt="logo" src="/avatar.png" objectFit="cover" />
+          </div>
         </div>
       </header>
       <main>{children}</main>

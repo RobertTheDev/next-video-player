@@ -27,7 +27,14 @@
     flex: 1;
 }
 
+.avatarImageContainer {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
 
+    overflow: hidden;
+    position: relative;
+}
 
 .logoImageContainer {
     height: 24px;
