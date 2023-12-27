@@ -16,6 +16,14 @@
     }
 }
 
+.videoChannelImageContainer {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 .videoThumbnailContainer {
     aspect-ratio: 16/9;
     width: 100%;
