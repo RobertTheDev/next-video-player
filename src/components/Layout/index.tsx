@@ -1,9 +1,22 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { FaSearch, FaPlus, FaHeart } from "react-icons/fa";
+import { FaSearch, FaPlus, FaHeart, FaSun, FaMoon } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 export default function Layout({ children }: { children: ReactNode }) {
+  const { theme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div>
       <header className={styles.headerContainer}>
@@ -23,6 +36,17 @@ export default function Layout({ children }: { children: ReactNode }) {
           </button>
         </div>
         <div className={styles.headerRightContainer}>
+          <button
+            onClick={() => {
+              if (theme === "dark") {
+                setTheme("light");
+              } else {
+                setTheme("dark");
+              }
+            }}
+          >
+            {theme === "dark" ? <FaMoon /> : <FaSun />}
+          </button>
           <button>
             <FaPlus />
           </button>
