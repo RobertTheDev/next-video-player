@@ -12,8 +12,18 @@ export default function VideoList() {
               <Image fill src={video.thumbnail.src} alt={video.title} />
             </div>
             <div>
+              <div className={styles.videoChannelImageContainer}>
+                <Image
+                  fill
+                  src={video.channel.image.url}
+                  alt={video.channel.name}
+                />
+              </div>
+              <p>{video.channel.name}</p>
               <p>{video.title}</p>
               <p>{video.duration}</p>
+              <p>{video.views} views</p>
+              <p>{video.createdAt}</p>
             </div>
           </div>
         );

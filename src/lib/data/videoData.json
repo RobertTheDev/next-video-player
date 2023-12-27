@@ -2,49 +2,116 @@
   {
     "id": "1",
     "duration": 60,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/2XQrJnliAr0/maxresdefault.jpg"
     },
-    "title": "The Development of Treyarch's Spider-Man 2 (2004) | Retrospective Series"
+    "title": "The Development of Treyarch's Spider-Man 2 (2004) | Retrospective Series",
+    "channel": {
+      "id": "1",
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   },
   {
     "id": "2",
     "duration": 94,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/l5Q5__rx67M/maxresdefault.jpg"
     },
-    "title": "My Biggest Regret | Theresa May"
+    "title": "My Biggest Regret | Theresa May",
+    "channel": {
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   },
   {
     "id": "3",
     "duration": 934,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/L4Xop6JH84E/maxresdefault.jpg"
     },
-    "title": "[4K] The Simpsons Hit & Run | 100% Completion | Full Game"
+    "title": "[4K] The Simpsons Hit & Run | 100% Completion | Full Game",
+    "channel": {
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   },
   {
     "id": "4",
     "duration": 194,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/24O00Jz8R04/maxresdefault.jpg"
     },
-    "title": "The Struggle of Building the Original iPhone - The Untold Story"
+    "title": "The Struggle of Building the Original iPhone - The Untold Story",
+    "channel": {
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   },
   {
     "id": "5",
     "duration": 104,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/U77vYa8Y4sw/maxresdefault.jpg"
     },
-    "title": "Spider-Man 2 is BRILLIANT but Flawed"
+    "title": "Spider-Man 2 is BRILLIANT but Flawed",
+    "channel": {
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   },
   {
     "id": "6",
     "duration": 23,
+    "views": 24000,
+    "createdAt": "2022-02-26T16:37:48.244Z",
+    "updatedAt": null,
     "thumbnail": {
       "src": "https://i.ytimg.com/vi/ljVtYj-YSnk/maxresdefault.jpg"
     },
-    "title": "Economist explains why Britain is poor"
+    "title": "Economist explains why Britain is poor",
+    "channel": {
+      "image": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIf8zZRCpaOPgKrtqUmMsxjyYN7gLaiV_bn5gzdBR-o4PQ=s68-c-k-c0x00ffffff-no-rj-mo"
+      },
+      "name": "Coldfusion",
+      "createdAt": "2022-02-26T16:37:48.244Z",
+      "updatedAt": null
+    }
   }
 ]
