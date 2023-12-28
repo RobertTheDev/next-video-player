@@ -39,7 +39,7 @@ CREATE TABLE "Channel" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "name" TEXT NOT NULL,
     "subscribers" INTEGER NOT NULL DEFAULT 0,
-    "imageId" TEXT NOT NULL
+    "imageId" TEXT
 );
 
 -- CreateTable
@@ -133,7 +133,7 @@ ALTER TABLE "VideoComment" ADD CONSTRAINT "VideoComment_channelId_fkey" FOREIGN 
 ALTER TABLE "VideoComment" ADD CONSTRAINT "VideoComment_videoId_fkey" FOREIGN KEY ("videoId") REFERENCES "Video"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Channel" ADD CONSTRAINT "Channel_imageId_fkey" FOREIGN KEY ("imageId") REFERENCES "ChannelImage"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Channel" ADD CONSTRAINT "Channel_imageId_fkey" FOREIGN KEY ("imageId") REFERENCES "ChannelImage"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "VideoLike" ADD CONSTRAINT "VideoLike_channelId_fkey" FOREIGN KEY ("channelId") REFERENCES "Channel"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
