@@ -36,22 +36,27 @@ export default function Layout({ children }: { children: ReactNode }) {
           </Link>
         </div>
         <div className={styles.headerCenterContainer}>
-          <input
-            placeholder="Search"
-            onChange={(e) => {
-              setSearchQuery(e.currentTarget.value);
-            }}
-          />
-          <button
-            onClick={() => {
-              router.push(`/results?q=${searchQuery}`);
-            }}
-          >
-            <FaSearch />
-          </button>
+          <div className={styles.searchContainer}>
+            <input
+              className={styles.searchInput}
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchQuery(e.currentTarget.value);
+              }}
+            />
+            <button
+              className={styles.searchButton}
+              onClick={() => {
+                router.push(`/results?q=${searchQuery}`);
+              }}
+            >
+              <FaSearch />
+            </button>
+          </div>
         </div>
         <div className={styles.headerRightContainer}>
           <button
+            className={styles.headerControlButton}
             onClick={() => {
               if (theme === "dark") {
                 setTheme("light");
@@ -63,6 +68,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             {theme === "dark" ? <FaMoon /> : <FaSun />}
           </button>
           <button
+            className={styles.headerControlButton}
             onClick={() => {
               router.push("/upload-video");
             }}
@@ -70,6 +76,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <FaPlus />
           </button>
           <button
+            className={styles.headerControlButton}
             onClick={() => {
               router.push("/saved");
             }}

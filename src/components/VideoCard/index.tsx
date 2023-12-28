@@ -24,16 +24,22 @@ export default function VideoCard({ video }: { video: IVideo }) {
         <Image fill src={video.thumbnail.url} alt={video.title} />
       </div>
 
-      <div>
+      <div className={styles.videoChannelBodyContainer}>
         <div className={styles.videoChannelImageContainer}>
           <Image fill src={video.channel.image.url} alt={video.channel.name} />
         </div>
-        <p>{video.channel.name}</p>
-        <p>{video.title}</p>
-        <p>{video.duration}</p>
-        <p>{video.totalViews.toLocaleString()} views</p>
-        <p>{video.createdAt}</p>
-        {/* <p>{formatDate(new Date(video.createdAt))}</p> */}
+        <div className={styles.videoChannelContentContainer}>
+          <div>
+            <p className={styles.videoTitle}>{video.title}</p>
+            <p>{video.channel.name}</p>
+          </div>
+          <div className={styles.videoChannelDetailsContainer}>
+            <p>{video.duration}</p>
+            <p>{video.totalViews.toLocaleString()} views</p>
+            <p>{video.createdAt}</p>
+          </div>
+          {/* <p>{formatDate(new Date(video.createdAt))}</p> */}
+        </div>
       </div>
     </div>
   );

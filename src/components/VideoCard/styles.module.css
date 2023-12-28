@@ -4,11 +4,32 @@
     position: relative;
 }
 
+.videoChannelContentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
 
+.videoChannelBodyContainer {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+
+}
+
+.videoChannelDetailsContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    justify-content: flex-start;
+}
 
 .videoChannelImageContainer {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -16,9 +37,15 @@
 
 .videoThumbnailContainer {
     aspect-ratio: 16/9;
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     width: 100%;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.videoTitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
 }
