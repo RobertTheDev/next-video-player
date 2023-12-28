@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { makeSchema, objectType, queryType, list } from "nexus";
+import { makeSchema, objectType, queryType, list, extendType } from "nexus";
 
 const VideoThumbnail = objectType({
   name: "VideoThumbnail",
@@ -79,6 +79,42 @@ const Query = queryType({
   },
 });
 
+const GetVideoByIdQuery = extendType({
+  type: "Query",
+  definition(t) {
+    t.field("videoById", {
+      type: Video,
+      args: {
+        id: "String",
+      },
+      resolve(_root, args, ctx) {
+        const { id } = args;
+
+        return ctx.prisma.video.findUnique({
+          where: {
+            id,
+          },
+          include: {
+            channel: {
+              include: {
+                image: true,
+              },
+            },
+            thumbnail: true,
+          },
+        });
+      },
+    });
+  },
+});
+
 export const schema = makeSchema({
-  types: [Video, VideoThumbnail, Channel, ChannelImage, Query],
+  types: [
+    Video,
+    VideoThumbnail,
+    Channel,
+    ChannelImage,
+    Query,
+    GetVideoByIdQuery,
+  ],
 });
