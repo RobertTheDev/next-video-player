@@ -1,12 +1,15 @@
-import VideoList from "@/components/VideoList";
+import VideoCard from "@/components/VideoCard";
 import createApolloClient from "@/lib/apolloClient";
+import IVideo from "@/lib/interfaces/Video";
 import { gql } from "@apollo/client";
-import { Video } from "@prisma/client";
+import styles from "../styles/Home.module.css";
 
-export default function HomePage({ videos }: { videos: Video[] }) {
+export default function HomePage({ videos }: { videos: IVideo[] }) {
   return (
-    <div>
-      <VideoList videos={videos} />
+    <div className={styles.videoListContainer}>
+      {videos.map((video) => {
+        return <VideoCard video={video} key={video.id} />;
+      })}
     </div>
   );
 }
