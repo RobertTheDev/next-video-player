@@ -11,6 +11,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   const router = useRouter();
 
+  const [searchQuery, setSearchQuery] = useState("");
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -34,10 +36,15 @@ export default function Layout({ children }: { children: ReactNode }) {
           </Link>
         </div>
         <div className={styles.headerCenterContainer}>
-          <input placeholder="Search" />
+          <input
+            placeholder="Search"
+            onChange={(e) => {
+              setSearchQuery(e.currentTarget.value);
+            }}
+          />
           <button
             onClick={() => {
-              router.push("/results");
+              router.push(`/results?q=${searchQuery}`);
             }}
           >
             <FaSearch />
